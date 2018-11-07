@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>{{ site.name }}: {{ site.description }}{% if page.title %} – {{ page.title }}{% endif %}</title> {% include meta.html %}
+  <!--[if lt IE 9]>
+     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+ <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+ <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+</head>
+<body>
+ <header>
+  <a href="{{ site.baseurl }}/">{{ page.title }}</a>
+  <nav>
+   <a href="{{ site.baseurl }}/funkyloffe">Funky Loffe</a> /
+   <a href="{{ site.baseurl }}/loffeninja">Loffe Ninja</a>
+  </nav>
+ </header>
+
+ {{ content }}
+ <footer></footer>
+ {% include analytics.html %}
+</body>
+</html>
